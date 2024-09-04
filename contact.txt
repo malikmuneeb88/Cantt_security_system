@@ -1,7 +1,3 @@
-muneeb, 03433022498, mm906191@gmail.com, islamabadaqib, 03365948769, sheraqib492@gmail.com, islamabad
-awef, ertrht, qd, asd
-aqib, 98765, sheraq, malik
-aqib, 03365945769, sheraqib123@gmail.com, islamabad
-sher, 03235332806, sher@example.com, rawalpindi
-moni, 09876587654, moni@example.com, karachi
-kashif, 0987654, kashif@123, karachi
+muneeb, 03433022498, mmm906191@gmail.com, islamabad
+sher, 03433022498, mmm906191@gmail.com, islamabad
+boos, sjera, vich o, jelum

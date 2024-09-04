@@ -7,7 +7,7 @@ def add_contact():
     address = input("Enter contact's adress:\n")
     
     contact = f"{name}, {number}, {email}, {address}\n"
-    
+    print("\n")
     with open('contact.txt', 'a') as file:
         file.write(contact)
         # print(contact)
@@ -24,5 +24,22 @@ def view_contact():
 view_contact()
 
 def delete_contact():
-    user = input("Enter contact u want to delete\: n")
+    with open('contact.txt', 'r') as file:
+        content = file.readlines()
+    user = input("Enter a contact you want to delete: \n")
     
+    sum = 0
+    for line in content:
+        if user in line:
+            content.remove(line)
+            print(content)
+            sum += 1
+
+    if sum == 1:
+        with open('contact.txt', 'w') as file:
+            file.writelines(content)
+        print(f"Contact {user} has been updated")
+    else:
+        print("Content not updated")
+
+delete_contact()
