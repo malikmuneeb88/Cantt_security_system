@@ -1,54 +1,61 @@
 import random
-print("Computer's Turn: Rock(r), Paper(p) or Scissor(s)?")
-computer=''
+
+while True:
     
+    print("\n")
     
-def gamewin(computer, player):
-    if computer == 'r':
-        if player == 'p':
-            return True
-        elif player == 's':
-            return False
+    print("1) Rock.\n")
+    print("2) Paper.\n")
+    print("3) Scissors.\n")
+    
+    choice = int(input("Enter Choice: "))
+    
+    if(choice == 1):
+        player = "Rock"
         
-    elif computer == 'p':
-        if player == 's':
-            return True
-        elif player == 'r':
-            return False 
+    elif(choice == 2):
+        player = "paper"
         
-    elif computer == 's':
-        if player == 'r':
-            return True
-        elif player == 'p':
-            return False
+    elif(choice == 3):
+        player = "Scissors"
         
-
-randomNumber = random.randint(1, 3)
-
-if randomNumber == 1:
-    computer = 'r'
+    print("\n")
     
-elif randomNumber == 2:
-    computer = 'p'
+    print("player choose", choice )
     
-elif randomNumber == 3:
-    computer = 's'
-
-i = 1
-while i <= 3:
-    player = input("Your's Turn: Rock(r), Paper(p) or Scissor(s)?")
-    game = gamewin(computer, player)
-    # i += 1
-
-    print(f"Computer choose {computer}")
-    print(f"Player choose {player}")
-
-    if game == None:
-        print("The game is Draw")
+    Throws = ["Rock", "Paper", "Scissors"]
+    computer = random.choice(Throws)
+    
+    print("computer choose", computer)
+    
+    if(player == computer):
+        print("Tie Game !")
+        
+    elif(player == "Rock"):
+        if(computer == "Paper"):
+            print("Computer wins !")
+        elif(computer == "Scissors"):
+            print("Player wins !")
             
-    elif game:
-        print("You Win!")
+    elif(player == "Paper"):
+        if(computer == "Rock"):
+            print("Player wins !")
+        elif(computer == "Scissors"):
+            print("Computer Wins !")
+    
+    elif(player == "Scissors"):
+        if(computer == "Rock"):
+            print("Compute Wins !")
+        elif(computer == "Paper"):
+            print("Player Wins ")
             
-    else:
-        print("Computer Win !")
-    i+=1
+    print("\n")
+    
+    print("1) Play Again.\n")
+    print("2) Quit.\n")
+     
+    choice = int(input("Enter Your choice:\n"))
+    
+    
+    if(choice == 2):
+        break

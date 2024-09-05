@@ -16,6 +16,7 @@ if menu == 1:
     else:
         print("Wrong Password or Enter again")
         
+    
 elif menu == 2:
     print("Goodbye!")
     
@@ -48,7 +49,7 @@ if sum == 1:
 elif sum == 0:
     print("Incorrect id")
     
-print("Welcome to islamabad cantt ")
+print("Welcome to islamabad cantt")
     
 
 
